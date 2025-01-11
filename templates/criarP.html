@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar Nova Planilha</title>
+</head>
+<body>
+    <h1>Criar uma Nova Planilha</h1>
+    <form action="{{ url_for('criar_nova_planilha') }}" method="post">
+        <label for="colunas">Digite os nomes das colunas (separados por vírgula):</label><br>
+        <input type="text" id="colunas" name="colunas" required><br><br>
+
+        <label for="linhas">Digite os valores para cada coluna (uma linha por vez, separando valores por vírgula):</label><br>
+        <textarea id="linhas" name="linhas" rows="5" required></textarea><br><br>
+
+        <label for="arquivo">Nome do arquivo Excel (ex: tabela.xlsx):</label><br>
+        <input type="text" id="arquivo" name="arquivo" required><br><br>
+
+        <button type="submit">Criar Planilha</button>
+    </form>
+</body>
+</html>
